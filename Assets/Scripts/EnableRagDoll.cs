@@ -4,9 +4,10 @@ using Sirenix.OdinInspector;
 using UnityEngine;  // can use classes in namespace
 
 [ExecuteAlways]     // execute when 1. Play Mode and 2. when editing
-public class EnableRagdoll : MonoBehaviour
+public class EnableRagDoll : MonoBehaviour
 // only class:[MonoBehavior] can be assigned to the Object
 {
+    public bool KillFlag = false;
     public void ExecuteKill() => SetKinematicOff();
     // Naming Conventions; variables starts with lowercase; methods starts with uppercase
     private Rigidbody[] rigidbodies;
@@ -32,14 +33,16 @@ public class EnableRagdoll : MonoBehaviour
         {
             rigidbodies[i].isKinematic = false;
         }
+
+        KillFlag = false;
     }
-    
-    [Button("Switch On/Off Kinematic", ButtonSizes.Large)]
-    private void SwitchKinematic()
-    {
-        for (int i = 0; i < rigidbodies.Length; i++)
-        {
-            rigidbodies[i].isKinematic = !rigidbodies[i].isKinematic;
-        }
-    }
+    //
+    // [Button("Switch On/Off Kinematic", ButtonSizes.Large)]
+    // private void SwitchKinematic()
+    // {
+    //     for (int i = 0; i < rigidbodies.Length; i++)
+    //     {
+    //         rigidbodies[i].isKinematic = !rigidbodies[i].isKinematic;
+    //     }
+    // }
 }
