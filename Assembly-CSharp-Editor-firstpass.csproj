@@ -12,11 +12,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{27e9bd5f-dcf0-d59c-ee84-9a8e31f7d8e8}</ProjectGuid>
+    <ProjectGuid>{83d48d42-cfef-b53e-b947-46f6493df49c}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -41,14 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
-    <None Include="Assets\Plugins\Sirenix\Readme.txt" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
+    <None Include="Assets\Plugins\Sirenix\Odin Inspector\Assets\Editor\Bootstrap License.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\UnityEditor\2022.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
