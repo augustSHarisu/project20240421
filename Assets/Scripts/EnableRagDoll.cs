@@ -33,16 +33,12 @@ public class EnableRagDoll : MonoBehaviour
         {
             rigidbodies[i].isKinematic = false;
         }
-
+        DisableAnimator();
         KillFlag = false;
     }
-    //
-    // [Button("Switch On/Off Kinematic", ButtonSizes.Large)]
-    // private void SwitchKinematic()
-    // {
-    //     for (int i = 0; i < rigidbodies.Length; i++)
-    //     {
-    //         rigidbodies[i].isKinematic = !rigidbodies[i].isKinematic;
-    //     }
-    // }
+    private void DisableAnimator()
+    {
+        this.GetComponent<StateMachine>().enabled = false;
+        this.GetComponent<Animator>().enabled = false;
+    }
 }
