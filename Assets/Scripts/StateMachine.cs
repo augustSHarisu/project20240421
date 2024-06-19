@@ -7,7 +7,7 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     public static bool Running = false;
-    public static void SetStateMachine() => SetStateMachine(Running);
+    public static void SetStateMachine_Run() => SetStateMachine(Running);
     
     // Private
     private static Animator animator;

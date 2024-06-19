@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using UnityEngine;  // can use classes in namespace
+using UnityEngine;
+using UnityEngine.AI; // can use classes in namespace
 
 [ExecuteAlways]     // execute when 1. Play Mode and 2. when editing
 public class EnableRagDoll : MonoBehaviour
@@ -17,7 +18,7 @@ public class EnableRagDoll : MonoBehaviour
         rigidbodies = this.gameObject.GetComponentsInChildren<Rigidbody>();
     }
     
-    [Button("Reset Kinematic On", ButtonSizes.Small)]
+    [Button("Reset Kinematic On", ButtonSizes.Medium)]
     private void SetKinematicOn()
     {
         for (int i = 0; i < rigidbodies.Length; i++)
@@ -26,7 +27,7 @@ public class EnableRagDoll : MonoBehaviour
         }
     }
     
-    [Button("Reset Kinematic Off (Ragdoll)", ButtonSizes.Small)]
+    [Button("Reset Kinematic Off (Ragdoll)", ButtonSizes.Medium)]
     private void SetKinematicOff()
     {
         for (int i = 0; i < rigidbodies.Length; i++)
@@ -34,11 +35,18 @@ public class EnableRagDoll : MonoBehaviour
             rigidbodies[i].isKinematic = false;
         }
         DisableAnimator();
+        DisableNav();
         KillFlag = false;
     }
     private void DisableAnimator()
     {
         this.GetComponent<StateMachine>().enabled = false;
         this.GetComponent<Animator>().enabled = false;
+    }
+    private void DisableNav()
+    {
+        this.GetComponent<NavMeshAgent>().enabled = false;
+        this.GetComponent<AIState>().enabled = false;
+        this.GetComponent<StateMachine>().enabled = false;
     }
 }
